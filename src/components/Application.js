@@ -1,14 +1,14 @@
-import React from "react";
+//import React from "react";
+import React, { useState } from "react";
 import "components/Application.scss";
-
 import DayList from "./DayList";
 import Appointment from "./Appointment";
 import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "../helpers/selectors";
 import useApplicationData from "../hooks/useApplicationData";
+import axios from "axios";
 
 
 export default function Application(props) {
-
   const {
     state,
     setDay,
@@ -18,13 +18,8 @@ export default function Application(props) {
 
   const dailyAppointments = getAppointmentsForDay(state, state.day);
   const interivewers = getInterviewersForDay(state, state.day);
-
-
   const mappedAppointments = dailyAppointments.map((appointment) => {
-    const interview = getInterview(state, appointment.interview);
-
-
-
+  const interview = getInterview(state, appointment.interview);
     return (
       <Appointment 
         key={appointment.id} 
@@ -38,7 +33,6 @@ export default function Application(props) {
     );
   });
 
-
   return (
     <main className="layout">
       <section className="sidebar">
@@ -47,11 +41,7 @@ export default function Application(props) {
           src="images/logo.png"
           alt="Interview Scheduler"
         />
-
-
         <hr className="sidebar__separator sidebar--centered" />
-
-
         <nav className="sidebar__menu">
           <DayList
             days={state.days}
@@ -59,16 +49,12 @@ export default function Application(props) {
             onChange={setDay}
           />
         </nav>
-
-
         <img
           className="sidebar__lhl sidebar--centered"
           src="images/lhl.png"
           alt="Lighthouse Labs"
         />
       </section>
-
-      
       <section className="schedule">
         {mappedAppointments}
         <Appointment key="last" time="5pm"/>
