@@ -21,3 +21,11 @@ npm test
 ```sh
 npm run storybook
 ```
+
+# Screenshots
+
+[Scheduler home page](/docs/scheduler_home.png)
+
+[Book Appointment](/docs/scheduler_add.png)
+
+[Delete Appointment](/docs/scheduler_delete.png)
