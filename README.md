@@ -24,8 +24,8 @@ npm run storybook
 
 # Screenshots
 
-[Scheduler home page](/docs/scheduler_home.png)
+![Scheduler home page](https://raw.githubusercontent.com/xfatimax/scheduler/master/docs/scheduler_home.png)
 
-[Book Appointment](/docs/scheduler_add.png)
+![Book Appointment](https://raw.githubusercontent.com/xfatimax/scheduler/master/docs/scheduler_add.png)
 
-[Delete Appointment](/docs/scheduler_delete.png)
+![Delete Appointment](https://raw.githubusercontent.com/xfatimax/scheduler/master/docs/scheduler_delete.png)
